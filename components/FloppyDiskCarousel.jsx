@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FloppyDiskCard from "./FloppyDiskCard";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const FloppyDiskCarousel = ({ cardsData }) => {
   const [currentIndex, setCurrentIndex] = useState(
@@ -53,18 +54,28 @@ const FloppyDiskCarousel = ({ cardsData }) => {
           );
         })}
       </div>
-      <div className="relative flex justify-center mt-10">
+      <div className="relative flex justify-center mt-10 space-x-4">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+          className="bg-white text-black w-12 h-12 flex justify-center items-center hover:bg-gray-200 transition-colors"
           onClick={handlePrevious}
         >
-          Previous
+          <motion.span
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <ArrowLeft />
+          </motion.span>
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+          className="bg-white text-black w-12 h-12 flex justify-center items-center hover:bg-gray-200 transition-colors"
           onClick={handleNext}
         >
-          Next
+          <motion.span
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <ArrowRight />
+          </motion.span>
         </button>
       </div>
     </div>
