@@ -1,17 +1,11 @@
 import React from "react";
-import GridPattern from "./GridPattern";
 import AnimatedGridPattern from "./AnimatedGridPattern";
-import MenuButton from "./MenuButton";
 import NavMenu from "./NavMenu";
+import ProjectsSection from "./ProjectsSection";
 
 export default function LandingPage() {
   return (
     <div className="bg-black">
-      {/* Nav Menu Button */}
-      {/* <div className="fixed top-4 right-4 z-50">
-        <MenuButton />
-      </div> */}
-
       <NavMenu className="z-50" />
 
       {/* Hero Section */}
@@ -47,9 +41,17 @@ export default function LandingPage() {
         </p>
       </div>
       {/* Projects Section */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-white">
+      <div className="relative min-h-screen min-w-full my-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-white mb-10">
           Projects
+        </h1>
+        <ProjectsSection />
+      </div>
+
+      {/* Tech Expertise Section */}
+      <div className="relative min-h-screen bg-emerald-500 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-white mb-6">
+          Tech Expertise
         </h1>
       </div>
     </div>
