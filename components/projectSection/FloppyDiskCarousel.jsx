@@ -42,18 +42,29 @@ const FloppyDiskCarousel = ({ cardsData }) => {
               key={index}
               className="carousel-card"
               animate={{ x, y, scale, rotate, zIndex }}
-              transition={{ type: "spring", stiffness: 50, damping: 20 }}
+              transition={{ type: "spring", stiffness: 75, damping: 20 }}
               style={{
                 position: "absolute",
                 display: "block",
                 zIndex,
               }}
             >
-              <FloppyDiskCard {...card} />
+              <FloppyDiskCard
+                key={index}
+                projectType={card.projectType}
+                projectName={card.projectName}
+                projectDescription={card.projectDescription}
+                projectImage={card.projectImage}
+                techStack={card.techStack}
+                currentIndex={currentIndex}
+                index={index}
+              />
             </motion.div>
           );
         })}
       </div>
+
+      {/* Arrow Buttons for Navigation */}
       <div className="relative flex justify-center mt-10 space-x-4">
         <button
           className="bg-white text-black w-12 h-12 flex justify-center items-center hover:bg-gray-200 transition-colors"

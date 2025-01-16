@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-// import { X } from 'lucide-react'
 import Link from "next/link";
 import { useState } from "react";
 import MenuButton from "./MenuButton";
+import { ArrowRight } from "lucide-react";
 
 const menuItems = [
   { title: "Home", href: "/" },
@@ -22,17 +22,23 @@ const socialLinks = [
 export default function CornerNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const arrowVariants = {
+    initial: {
+      scale: 1,
+      rotate: 0,
+    },
+    hover: {
+      scale: 1.4,
+      rotate: -45,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <>
-      {/* Toggle Button */}
-      {/* <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed right-4 top-4 z-40 flex items-center gap-2 rounded-full bg-purple-600 px-4 py-2 text-white hover:bg-purple-700"
-      >
-        <span>Open me</span>
-        <span className="text-lg">↗</span>
-      </button> */}
-
       {/* Nav Menu Button */}
       <div
         className="fixed top-4 right-4 z-50"
@@ -112,12 +118,17 @@ export default function CornerNav() {
               transition={{ delay: 0.8 }}
               className="absolute bottom-12 right-12"
             >
-              <Link
+              <motion.a
                 href="/contact"
-                className="rounded-2xl bg-white text-emerald-600 px-6 py-4 text-xl md:text-4xl font-bold transition-colors hover:bg-emerald-700 hover:text-white"
+                className="bg-white border border-black text-black flex flex-row items-center gap-2 px-6 py-4 text-xl md:text-4xl font-bold hover:bg-gray-200 transition-colors"
+                initial="initial"
+                whileHover="hover"
               >
-                Contact Me
-              </Link>
+                <motion.span className="inline-block">Contact Me</motion.span>
+                <motion.div variants={arrowVariants} className="h-6 w-6">
+                  <ArrowRight />
+                </motion.div>
+              </motion.a>
             </motion.div>
           </motion.div>
         )}

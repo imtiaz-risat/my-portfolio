@@ -1,24 +1,19 @@
 import React from "react";
-import AnimatedGridPattern from "./AnimatedGridPattern";
+import AnimatedGridPattern from "./heroSection/AnimatedGridPattern";
 import NavMenu from "./NavMenu";
-import ProjectsSection from "./ProjectsSection";
-import HeroSection from "./HeroSection";
+import ProjectsSection from "./projectSection/ProjectsSection";
+import HeroSection from "./heroSection/HeroSection";
+import { motion } from "framer-motion";
+import WelcomeDiv from "./welcomeDiv/WelcomeDiv";
 
 export default function LandingPage() {
   return (
     <div className="bg-black">
+      <WelcomeDiv />
       <NavMenu className="z-50" />
 
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* Projects Section */}
-      <div className="relative min-h-screen min-w-full my-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 md:mb-14">
-          Projects <span className="text-white opacity-75">I've Worked On</span>
-        </h1>
-        <ProjectsSection />
-      </div>
+      <ProjectsSection />
 
       {/* Tech Expertise Section */}
       <div className="relative min-h-screen bg-emerald-500 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
