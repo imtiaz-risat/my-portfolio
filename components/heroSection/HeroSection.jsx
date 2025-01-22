@@ -13,7 +13,7 @@ const HeroSection = () => {
       </h1>
       <div className="flex justify-center  mt-2">
         <div className="relative inline-block">
-          <span className="absolute sm:top-1 left-[45%] sm:left-[40%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+          <span className="animate-float absolute sm:top-1 left-[30%]  transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
             I can
           </span>
           <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">
@@ -21,7 +21,7 @@ const HeroSection = () => {
           </span>
         </div>
         <div className="relative inline-block">
-          <span className="absolute sm:top-1 left-[77%] sm:left-[80%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+          <span className="animate-float absolute sm:top-1 left-[67%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
             I drink
           </span>
           <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </span>
         </div>
         <div className="relative inline-block">
-          <span className="absolute sm:top-1 left-[40%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+          <span className="animate-float absolute sm:top-1 left-[30%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
             I also
           </span>
           <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">

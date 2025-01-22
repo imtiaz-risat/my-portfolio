@@ -72,8 +72,8 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="relative min-h-screen min-w-full my-20 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 md:mb-14">
+    <div className="relative min-h-screen bg-black min-w-full flex flex-col items-center justify-center z-0">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-8 md:mb-14">
         Projects <span className="text-white opacity-75">I've Worked On</span>
       </h1>
       <div className="min-w-full flex flex-col items-center">
