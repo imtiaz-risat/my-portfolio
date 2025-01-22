@@ -1,43 +1,84 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { MdEvent, MdLocationOn } from "react-icons/md";
 
 export default function AchievementSection() {
+  const achievements = [
+    {
+      title: "AI & API Hackathon",
+      award: "Champion",
+      event: "KUET CSE BitFest 2025",
+      location: "KUET",
+      date: "January, 2025",
+      image: "/trophy.svg",
+    },
+    {
+      title: "Project Shocase",
+      award: "1st Runner Up",
+      event: "KUET CSE BitFest 2025",
+      location: "KUET",
+      date: "January, 2025",
+      image: "/medal.svg",
+    },
+    {
+      title: "Data Hackathon",
+      award: "Champion",
+      event: "4th DIU Data Science Summit 2024",
+      location: "Daffodil Intl. University",
+      date: "December, 2024",
+      image: "/trophy.svg",
+    },
+    {
+      title: "Dhaka Divisional Hackathon",
+      award: "Champion",
+      event: "Technocrats V.2",
+      location: "IUBAT",
+      date: "December, 2024",
+      image: "/trophy.svg",
+    },
+    {
+      title: "National Hackathon",
+      award: "1st Runner Up",
+      event: "EWU Robofest 2024",
+      location: "East West University",
+      date: "November, 2024",
+      image: "/medal.svg",
+    },
+  ];
+
   return (
     <div className="relative min-h-fit bg-white flex flex-col items-center justify-center py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32 z-0">
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-6">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center text-black mb-6">
         Achievements <span className="text-black opacity-75">So Far</span>
       </h1>
-      <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 lg:px-20">
-        {/* Box 1 */}
-        <div className="bg-black p-4 shadow-md shadow-emerald-400 flex flex-col justify-between flex-1 col-span-1">
-          <div className="flex flex-row justify-between mb-2">
-            <div>
-              <h2 className="text-white text-lg font-bold">Projects</h2>
-              <p className="text-gray-300">10+ Completed Projects</p>
+      <div className="w-full flex flex-row flex-wrap gap-4 justify-center px-4 sm:px-6 lg:px-20">
+        {achievements.map((achievement, index) => (
+          <div
+            key={index}
+            className="bg-black w-80 p-4 shadow-md shadow-emerald-400 flex flex-col justify-between"
+          >
+            <div className="flex flex-row justify-between mb-2">
+              <div>
+                <h2 className="text-white text-lg font-bold">
+                  {achievement.title}
+                </h2>
+                <p className="text-yellow-300 text-lg">{achievement.award}</p>
+                <p className="text-gray-300 text-base">{achievement.event}</p>
+              </div>
+              <img src={achievement.image} alt="Trophy" className="w-16 h-16" />
             </div>
-            <img
-              src="/trophy.svg"
-              alt="Trophy"
-              className=" w-12 h-12 sm:w-16 sm:h-16"
-            />
+            <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-row items-center gap-1">
+                <MdLocationOn className="text-gray-400" />
+                <p className="text-gray-400 text-xs">{achievement.location}</p>
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <MdEvent className="text-gray-400" />
+                <p className="text-gray-400 text-xs">{achievement.date}</p>
+              </div>
+            </div>
           </div>
-        </div>
-        {/* Box 2 */}
-        <div className="bg-black p-4 shadow-md shadow-emerald-400 flex-[1_0_50%] col-span-1">
-          <img src="/medal.svg" alt="Medal" className="w-12 h-12 mb-2" />
-          <h2 className="text-white text-lg font-bold mb-2">Skills</h2>
-          <p className="text-gray-300">10+ Skills</p>
-        </div>
-        {/* Box 3 */}
-        <div className="bg-black p-4 shadow-md shadow-emerald-400 flex-[1_0_50%] col-span-1">
-          <h2 className="text-white text-lg font-bold mb-2">Experience</h2>
-          <p className="text-gray-300">2+ Years</p>
-        </div>
-        {/* Box 4 */}
-        <div className="bg-black p-4 shadow-md shadow-emerald-400 flex-[1_0_50%] col-span-1">
-          <h2 className="text-white text-lg font-bold mb-2">Certificates</h2>
-          <p className="text-gray-300">2+ Certificates</p>
-        </div>
+        ))}
       </div>
     </div>
   );
