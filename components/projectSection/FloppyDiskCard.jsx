@@ -37,16 +37,18 @@ const FloppyDiskCard = ({
       <div className="relative w-80 h-[22rem] md:w-96 md:h-96">
         {/* Custom shape background */}
         <svg
-          className="absolute top-0 left-0 w-full h-full"
+          className={`absolute top-0 left-0 w-full h-full ${
+            currentIndex === index ? "drop-shadow-md shadow-emerald-400" : ""
+          }`}
           viewBox="0 0 400 320"
           fill="none"
           preserveAspectRatio="none"
         >
           <path
             d="M0 0 H320 L400 80 V320 H0 Z"
-            stroke="#000000"
-            strokeWidth={2.5}
-            fill={currentIndex === index ? "#10b981" : "#ffffff"}
+            stroke={currentIndex === index ? "#10b981" : "#000000"}
+            strokeWidth={"2.5"}
+            fill={currentIndex === index ? "#000000" : "#ffffff"}
             className="transition-colors duration-300 ease-linear"
           />
         </svg>
