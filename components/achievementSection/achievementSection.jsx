@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AchievementSection() {
   return (
-    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center py-6 px-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16 z-0">
+    <div className="relative min-h-fit bg-white flex flex-col items-center justify-center py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32 z-0">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-6">
         Achievements <span className="text-black opacity-75">So Far</span>
       </h1>

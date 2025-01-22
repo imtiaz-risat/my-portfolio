@@ -13,7 +13,7 @@ import ToolsCard from "./ToolsCard";
 
 export default function SkillsSection() {
   return (
-    <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-6 px-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16 z-0">
+    <div className="relative min-h-fit bg-black flex flex-col items-center justify-center py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32 z-0">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
         Skill Sets <span className="text-white opacity-75">I Bring</span>
       </h1>

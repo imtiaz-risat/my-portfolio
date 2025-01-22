@@ -7,46 +7,47 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         <AnimatedGridPattern />
       </div>
-
-      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-white">
-        Hi, <span className="text-emerald-400 font-semibold">I'm Risat</span>
-      </h1>
-      <div className="flex justify-center  mt-2">
-        <div className="relative inline-block">
-          <span className="animate-float absolute sm:top-1 left-[30%]  transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
-            I can
-          </span>
-          <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">
-            Code.
-          </span>
+      <div className="px-2 sm:px-4 lg:px-8 flex flex-col justify-center items-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-2 sm:mb-0">
+          Hi, <span className="text-emerald-400 font-semibold">I'm Risat</span>
+        </h1>
+        <div className="flex flex-col sm:flex-row text-center sm:text-left justify-center">
+          <div className="relative inline-block">
+            <span className="animate-float absolute sm:top-1 left-[35%]  transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+              I can
+            </span>
+            <span className="text-7xl sm:text-7xl lg:text-8xl font-black text-white">
+              Code.
+            </span>
+          </div>
+          <div className="relative inline-block">
+            <span className="animate-float absolute sm:top-1 left-[67%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+              I drink
+            </span>
+            <span className="text-7xl sm:text-7xl lg:text-8xl font-black text-white">
+              Coffee.
+            </span>
+          </div>
+          <div className="relative inline-block">
+            <span className="animate-float absolute sm:top-1 left-[30%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
+              I also
+            </span>
+            <span className="text-7xl sm:text-7xl lg:text-8xl font-black text-white">
+              Design.
+            </span>
+          </div>
         </div>
-        <div className="relative inline-block">
-          <span className="animate-float absolute sm:top-1 left-[67%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
-            I drink
-          </span>
-          <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">
-            Coffee.
-          </span>
-        </div>
-        <div className="relative inline-block">
-          <span className="animate-float absolute sm:top-1 left-[30%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
-            I also
-          </span>
-          <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">
-            Design.
-          </span>
-        </div>
+        <p className="text-sm sm:text-lg text-white mt-4 text-center">
+          I'm a{" "}
+          <span className="font-semibold text-emerald-400">
+            Frontend Designer
+          </span>{" "}
+          and <span className="font-semibold text-emerald-400">Developer</span>.
+        </p>
+        <p className="text-sm sm:text-lg text-white text-center px-8">
+          I specialize in frontend development, UI/UX design and visual design.
+        </p>
       </div>
-      <p className="text-lg text-white mt-4 text-center">
-        I'm a{" "}
-        <span className="font-semibold text-emerald-400">
-          Frontend Designer
-        </span>{" "}
-        and <span className="font-semibold text-emerald-400">Developer</span>.
-      </p>
-      <p className="text-lg text-white text-center px-8">
-        I specialize in frontend development, UI/UX design and visual design.
-      </p>
     </div>
   );
 };

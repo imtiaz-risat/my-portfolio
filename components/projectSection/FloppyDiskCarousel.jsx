@@ -33,8 +33,8 @@ const FloppyDiskCarousel = ({ cardsData }) => {
   };
 
   return (
-    <div className="min-w-full relative flex flex-col justify-center items-center">
-      <div className="flex justify-center items-center space-x-4 min-w-full h-[50vh] overflow-x-hidden">
+    <div className="min-h-fit min-w-full relative flex flex-col justify-center items-center">
+      <div className="h-96 flex justify-center items-center space-x-4 min-w-full overflow-x-hidden">
         {cardsData.map((card, index) => {
           const { x, y, scale, rotate, zIndex } = calculatePosition(index);
           return (
@@ -65,7 +65,7 @@ const FloppyDiskCarousel = ({ cardsData }) => {
       </div>
 
       {/* Arrow Buttons for Navigation */}
-      <div className="relative flex justify-center mt-10 space-x-4">
+      <div className="relative flex justify-center mt-6 space-x-4">
         <button
           className="bg-white text-black w-12 h-12 flex justify-center items-center hover:bg-gray-200 transition-colors"
           onClick={handlePrevious}

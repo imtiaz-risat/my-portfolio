@@ -10,7 +10,7 @@ import AchievementSection from "./achievementSection/achievementSection";
 
 export default function LandingPage() {
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-x-hidden">
       <WelcomeDiv />
       <NavMenu className="z-50" />
 
