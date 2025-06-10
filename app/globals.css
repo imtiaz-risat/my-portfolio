@@ -154,3 +154,19 @@ body {
   scrollbar-color: #10b981 #000; /* Thumb color then track color */
   scrollbar-arrow-color: #000;
 }
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.heart-beat {
+  animation: heartBeat 0.3s ease-in-out;
+}

@@ -19,6 +19,15 @@ const HeroSection = () => {
     const newState = !isHeartFilled;
     setIsHeartFilled(newState);
     localStorage.setItem("heartFilled", JSON.stringify(newState));
+
+    // Add animation class
+    const heartElement = document.querySelector(".heart-icon");
+    heartElement.classList.add("heart-beat");
+
+    // Remove animation class after animation completes
+    setTimeout(() => {
+      heartElement.classList.remove("heart-beat");
+    }, 300);
   };
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">
@@ -78,7 +87,9 @@ const HeroSection = () => {
           className="mt-8 p-2 text-white hover:text-emerald-400 transition-colors duration-300"
         >
           <Heart
-            className="h-8 w-8"
+            className={`h-8 w-8 transition-transform duration-300 heart-icon heart-beat ${
+              isHeartFilled ? "scale-100" : "group-hover:scale-110"
+            }`}
             fill={isHeartFilled ? "#34d399" : "none"}
             stroke="#34d399"
           />
