@@ -99,11 +99,10 @@ const FloppyDiskCard = ({
                 initial="initial"
                 disabled={currentIndex === index ? false : true}
               >
-                <span className="text-sm font-medium">Live Demo</span>
-                <motion.div
-                  variants={svgVariants}
-                  className="transform-gpu" // Optional: helps with animation performance
-                >
+                <span className="text-xs md:text-sm font-medium">
+                  Live Demo
+                </span>
+                <motion.div variants={svgVariants} className="transform-gpu">
                   <Globe className="w-4 h-4" />
                 </motion.div>
               </motion.button>
@@ -114,7 +113,9 @@ const FloppyDiskCard = ({
                 initial="initial"
                 disabled={currentIndex === index ? false : true}
               >
-                <span className="text-sm font-medium">Source Code</span>
+                <span className="text-xs md:text-sm font-medium">
+                  Source Code
+                </span>
                 <motion.div
                   variants={svgVariants}
                   className="transform-gpu" // Optional: helps with animation performance
