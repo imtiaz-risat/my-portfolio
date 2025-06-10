@@ -2,13 +2,14 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuButton from "./MenuButton";
 import { ArrowRight } from "lucide-react";
+import Logo from "./Logo";
 
 const menuItems = [
   { title: "Home", href: "/" },
-  { title: "About Me", href: "/about-me" },
+  { title: "About Me", href: "/about" },
   { title: "Projects", href: "/projects" },
 ];
 
@@ -21,6 +22,27 @@ const socialLinks = [
 
 export default function CornerNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const arrowVariants = {
     initial: {
@@ -40,15 +62,39 @@ export default function CornerNav() {
   return (
     <>
       {/* Nav Menu Button */}
-      <div
+      <motion.div
         className="fixed top-4 right-4 z-50"
+        initial={{ y: 0, opacity: 1 }}
+        animate={{
+          y: isVisible ? 0 : -100,
+          opacity: isVisible ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         onClick={() => {
           setIsMenuOpen(!isMenuOpen);
-          console.log(isMenuOpen);
         }}
       >
-        <MenuButton />
-      </div>
+        <MenuButton isOpen={isMenuOpen} />
+      </motion.div>
+
+      <motion.div
+        className="fixed top-4 left-6 z-50"
+        initial={{ y: 0, opacity: 1 }}
+        animate={{
+          y: isVisible ? 0 : -100,
+          opacity: isVisible ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        onClick={() => {
+          setIsMenuOpen(!isMenuOpen);
+        }}
+      >
+        {/* <MenuButton isOpen={isMenuOpen} /> */}
+        <Link href="/">
+          {/* <img src="/IR-logo.svg" alt="Logo" className="h-12 w-12" /> */}
+          <Logo />
+        </Link>
+      </motion.div>
 
       {/* Navigation Overlay */}
       <AnimatePresence>
@@ -68,7 +114,7 @@ export default function CornerNav() {
                 transition={{ delay: 0.2 }}
               >
                 <Link href="/">
-                  <div className="h-12 w-12 rounded-lg bg-white/10" />
+                  <img src="/IR-logo.svg" alt="Logo" className="h-12 w-12" />
                 </Link>
               </motion.div>
             </div> */}
@@ -84,6 +130,7 @@ export default function CornerNav() {
                 >
                   <Link
                     href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
                     className="text-6xl md:text-8xl font-black text-white/70 transition-colors hover:text-white"
                   >
                     {item.title}.

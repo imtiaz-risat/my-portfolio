@@ -123,3 +123,33 @@ body {
   height: 100%;
   z-index: -1; /* Ensure it stays in the background */
 }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Remove scrollbar arrows */
+::-webkit-scrollbar-button {
+  color: #000;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #000; /* Thumb color then track color */
+  scrollbar-arrow-color: #000;
+}

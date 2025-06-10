@@ -93,8 +93,9 @@ const FloppyDiskCard = ({
               {/* Live Demo Button */}
               <motion.button
                 className="bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
-                whileHover="hover"
+                whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
+                disabled={currentIndex === index ? false : true}
               >
                 <span className="text-sm font-medium">Live Demo</span>
                 <motion.div
@@ -107,8 +108,9 @@ const FloppyDiskCard = ({
               {/* Source Code Button */}
               <motion.button
                 className="bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
-                whileHover="hover"
+                whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
+                disabled={currentIndex === index ? false : true}
               >
                 <span className="text-sm font-medium">Source Code</span>
                 <motion.div

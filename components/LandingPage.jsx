@@ -15,7 +15,7 @@ export default function LandingPage() {
       <NavMenu className="z-50" />
 
       <HeroSection />
-      <ProjectsSection />
+      <ProjectsSection id="projects" />
 
       {/* Tech Expertise Section */}
       {/* <div className="relative min-h-screen bg-emerald-500 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 z-0">

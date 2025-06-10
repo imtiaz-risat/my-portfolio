@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import FloppyDiskCard from "./FloppyDiskCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -7,6 +7,18 @@ const FloppyDiskCarousel = ({ cardsData }) => {
   const [currentIndex, setCurrentIndex] = useState(
     Math.floor(cardsData.length / 2)
   );
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [hasAnimated, setHasAnimated] = useState(false);
+  useEffect(() => {
+    if (isInView && !hasAnimated) setHasAnimated(true);
+  }),
+    [isInView, hasAnimated];
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
@@ -33,7 +45,10 @@ const FloppyDiskCarousel = ({ cardsData }) => {
   };
 
   return (
-    <div className="min-h-fit min-w-full relative flex flex-col justify-center items-center">
+    <div
+      ref={ref}
+      className="min-h-fit min-w-full relative flex flex-col justify-center items-center"
+    >
       <div className="h-96 flex justify-center items-center space-x-4 min-w-full overflow-x-hidden">
         {cardsData.map((card, index) => {
           const { x, y, scale, rotate, zIndex } = calculatePosition(index);
@@ -41,7 +56,18 @@ const FloppyDiskCarousel = ({ cardsData }) => {
             <motion.div
               key={index}
               className="carousel-card"
-              animate={{ x, y, scale, rotate, zIndex }}
+              initial={{ x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }}
+              // initial={
+              //   hasAnimated
+              //     ? { x, y, scale, rotate, zIndex }
+              //     : { x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }
+              // }
+              animate={
+                isInView
+                  ? { x, y, scale, rotate, zIndex }
+                  : { x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }
+              }
+              // animate={{ x, y, scale, rotate, zIndex }}
               transition={{ type: "spring", stiffness: 75, damping: 20 }}
               style={{
                 position: "absolute",

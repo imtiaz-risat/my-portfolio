@@ -1,17 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-export default function MenuButton() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+export default function MenuButton({ isOpen }) {
   return (
-    <div
-      className="flex flex-col justify-center items-end w-8 h-8 cursor-pointer"
-      onClick={toggleMenu}
-    >
+    <div className="flex flex-col justify-center items-end w-8 h-8 cursor-pointer">
       <div
         className={`h-1 w-9 bg-white transform transition-all duration-400 ${
           isOpen ? "w-5 rotate-45 translate-y-2" : ""

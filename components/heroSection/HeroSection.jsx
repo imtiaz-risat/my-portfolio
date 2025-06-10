@@ -8,7 +8,7 @@ const HeroSection = () => {
         <AnimatedGridPattern />
       </div>
       <div className="px-2 sm:px-4 lg:px-8 flex flex-col justify-center items-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-2 sm:mb-0">
+        <h1 className="text-5xl lg:text-6xl font-semibold text-white mb-2 sm:mb-0">
           Hi, <span className="text-emerald-400 font-semibold">I'm Risat</span>
         </h1>
         <div className="flex flex-col sm:flex-row text-center sm:text-left justify-center">
@@ -22,7 +22,7 @@ const HeroSection = () => {
           </div>
           <div className="relative inline-block">
             <span className="animate-float absolute sm:top-1 left-[67%] transform -translate-x-1/2 text-xs sm:text-sm lg:text-lg text-white opacity-70">
-              I drink
+              I love
             </span>
             <span className="text-7xl sm:text-7xl lg:text-8xl font-black text-white">
               Coffee.
