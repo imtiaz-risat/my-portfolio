@@ -232,7 +232,7 @@ AI & Integrations:
   {
     projectType: "Mobile",
     projectName: "Check.td - Smart Task & Productivity Manager",
-    projectImage: "/project/Check-td.png",
+    projectImage: "/project/checktd.png",
     techStack: ["react-native", "expo", "firebase"],
     techStackDetails:
       "React Native with Expo for cross-platform mobile app development, Firebase for backend services including authentication, real-time database, and push notifications",
