@@ -79,7 +79,7 @@ function AboutPage() {
             >
               About Me
             </motion.h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Profile Image */}
               <motion.div
                 variants={fadeInUp}
@@ -116,7 +116,7 @@ function AboutPage() {
                     <span>Download CV</span>
                   </motion.a>
                   <motion.a
-                    href="mailto:your.email@example.com"
+                    href="mailto:ahababimtiaz@iut-dhaka.edu"
                     className="flex items-center gap-2 bg-white/10 px-6 py-3 hover:bg-white/20 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

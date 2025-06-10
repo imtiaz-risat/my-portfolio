@@ -63,7 +63,7 @@ export default function CornerNav() {
     <>
       {/* Nav Menu Button */}
       <motion.div
-        className="fixed top-4 right-4 z-50"
+        className="fixed top-4 right-4 z-40"
         initial={{ y: 0, opacity: 1 }}
         animate={{
           y: isVisible ? 0 : -100,
@@ -78,16 +78,13 @@ export default function CornerNav() {
       </motion.div>
 
       <motion.div
-        className="fixed top-4 left-6 z-50"
+        className="fixed top-4 left-6 z-40"
         initial={{ y: 0, opacity: 1 }}
         animate={{
           y: isVisible ? 0 : -100,
           opacity: isVisible ? 1 : 0,
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        onClick={() => {
-          setIsMenuOpen(!isMenuOpen);
-        }}
       >
         {/* <MenuButton isOpen={isMenuOpen} /> */}
         <Link href="/">
@@ -104,7 +101,7 @@ export default function CornerNav() {
             animate={{ clipPath: "circle(150% at calc(100% - 3rem) 3rem)" }}
             exit={{ clipPath: "circle(0% at calc(100% - 3rem) 3rem)" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-emerald-500"
+            className="fixed inset-0 z-30 bg-emerald-500"
           >
             {/* Logo */}
             {/* <div className="absolute left-8 top-8">
