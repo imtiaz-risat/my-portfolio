@@ -34,7 +34,7 @@ const FloppyDiskCard = ({
   };
   return (
     <>
-      <div className="relative w-80 h-[22rem] md:w-96 md:h-96">
+      <div className={`relative w-80 h-[22rem] md:w-96 md:h-96`}>
         {/* Custom shape background */}
         <svg
           className={`absolute top-0 left-0 w-full h-full ${
@@ -56,15 +56,17 @@ const FloppyDiskCard = ({
         {/* Content */}
         <div
           className={`relative z-10 p-6 flex flex-col justify-center ${
-            currentIndex === index ? "text-white" : "text-black opacity-75"
+            currentIndex === index ? "text-white" : "text-black opacity-55"
           } h-full`}
         >
           <div className="space-y-0.5">
-            <p className="mr-14 text-sm uppercase tracking-wider opacity-90">
+            <p className="mr-14 text-sm uppercase tracking-wider opacity-90 line-clamp-1">
               {projectType}
             </p>
 
-            <h2 className="mr-10 text-2xl font-semibold">{projectName}</h2>
+            <h2 className="mr-10 text-2xl font-semibold line-clamp-2">
+              {projectName}
+            </h2>
 
             <div className="bg-white border border-black w-full h-auto aspect-[16/9] pt-1">
               <img

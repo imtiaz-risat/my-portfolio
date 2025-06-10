@@ -5,200 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Github, Globe, X } from "lucide-react";
 import Image from "next/image";
 import NavMenu from "@/components/NavMenu";
-
-const projects = [
-  {
-    projectType: "Web Development",
-    projectName: "Portfolio Website",
-    projectImage: "/demo-project1.jpg",
-    techStack: ["javascript", "react", "nextjs"],
-    techStackDetails: `Frontend:
-• Next.js 13+ with App Router
-• React for UI components
-• Tailwind CSS for styling
-• Framer Motion for animations
-• Lucide Icons for icons
-
-Backend:
-• Next.js API Routes
-• Server-side rendering
-• Static site generation
-
-Deployment:
-• Vercel for hosting
-• GitHub for version control`,
-    liveDemo: "https://your-portfolio.com",
-    sourceCode: "https://github.com/yourusername/portfolio",
-    description: "A modern portfolio website built with Next.js and React",
-    fullDescription: `A personal portfolio website showcasing my work and skills. Built with Next.js 13+ and React, featuring:
-    • Modern, responsive design with smooth animations
-    • Server-side rendering for optimal performance
-    • Dark mode with emerald accent theme
-    • Interactive project showcase
-    • Contact form with email integration
-    • SEO optimized with metadata
-    • Optimized images and assets
-    • Custom animations using Framer Motion`,
-    features: [
-      "Responsive Design",
-      "Dark Mode",
-      "Server-Side Rendering",
-      "SEO Optimization",
-      "Contact Form",
-      "Project Showcase",
-    ],
-    challenges:
-      "Implementing smooth animations while maintaining performance, and creating a unique design that stands out while remaining professional.",
-    solution:
-      "Used Framer Motion for optimized animations, implemented lazy loading for images, and created a custom design system with emerald accents.",
-  },
-  {
-    projectType: "Mobile App",
-    projectName: "Fitness Tracker",
-    projectImage: "/demo-project2.jpg",
-    techStack: ["react", "nodejs", "mongodb"],
-    techStackDetails: `Frontend:
-• React Native for cross-platform development
-• Redux for state management
-• React Navigation for routing
-• Native Base for UI components
-
-Backend:
-• Node.js with Express
-• MongoDB for database
-• WebSocket for real-time updates
-• JWT for authentication
-
-Mobile Features:
-• Push notifications
-• Offline storage
-• Camera integration
-• Location services`,
-    liveDemo: "https://fitness-tracker.com",
-    sourceCode: "https://github.com/yourusername/fitness-tracker",
-    description: "A mobile app for tracking fitness goals and progress",
-    fullDescription: `A comprehensive fitness tracking application that helps users monitor their health and fitness journey. Features include:
-    • Workout tracking and planning
-    • Nutrition monitoring and meal planning
-    • Progress visualization with charts
-    • Social features for community support
-    • Integration with health devices
-    • Customizable fitness goals
-    • Offline functionality
-    • Push notifications for reminders`,
-    features: [
-      "Workout Tracking",
-      "Nutrition Monitoring",
-      "Progress Charts",
-      "Social Features",
-      "Health Device Integration",
-      "Offline Support",
-    ],
-    challenges:
-      "Managing real-time data synchronization, implementing complex workout algorithms, and ensuring smooth performance with offline capabilities.",
-    solution:
-      "Implemented a robust caching system, used WebSocket for real-time updates, and created a flexible workout algorithm system.",
-  },
-  {
-    projectType: "Web Development",
-    projectName: "E-Commerce Website",
-    projectImage: "/demo-project4.jpg",
-    techStack: ["javascript", "react", "nodejs", "mongodb"],
-    techStackDetails: `Frontend:
-• React with TypeScript
-• Redux Toolkit for state management
-• Material-UI for components
-• Stripe for payments
-
-Backend:
-• Node.js with Express
-• MongoDB with Mongoose
-• JWT authentication
-• WebSocket for real-time updates
-
-Infrastructure:
-• AWS for hosting
-• Docker for containerization
-• CI/CD with GitHub Actions
-• Redis for caching`,
-    liveDemo: "https://ecommerce-demo.com",
-    sourceCode: "https://github.com/yourusername/ecommerce",
-    description: "Full-stack e-commerce platform with modern features",
-    fullDescription: `A complete e-commerce solution with advanced features and modern architecture. Key features include:
-    • Product catalog with advanced filtering
-    • Secure payment processing
-    • User authentication and authorization
-    • Shopping cart and wishlist
-    • Order tracking and management
-    • Admin dashboard
-    • Real-time inventory management
-    • Customer reviews and ratings
-    • Responsive design for all devices`,
-    features: [
-      "Product Catalog",
-      "Secure Payments",
-      "User Authentication",
-      "Shopping Cart",
-      "Order Management",
-      "Admin Dashboard",
-    ],
-    challenges:
-      "Implementing secure payment processing, managing real-time inventory, and creating a scalable architecture for handling multiple concurrent users.",
-    solution:
-      "Used Stripe for secure payments, implemented WebSocket for real-time updates, and designed a microservices architecture for scalability.",
-  },
-  {
-    projectType: "Mobile App",
-    projectName: "Social Media App",
-    projectImage: "/demo-project5.jpg",
-    techStack: ["react-native", "firebase", "redux"],
-    techStackDetails: `Frontend:
-• React Native with TypeScript
-• Redux for state management
-• React Navigation
-• Custom UI components
-
-Backend:
-• Firebase Authentication
-• Cloud Firestore for database
-• Firebase Storage for media
-• Cloud Functions for backend logic
-
-Features:
-• Real-time messaging
-• Push notifications
-• Media compression
-• Offline support
-• Location services`,
-    liveDemo: "https://social-app.com",
-    sourceCode: "https://github.com/yourusername/social-app",
-    description: "A social media application built with React Native",
-    fullDescription: `A feature-rich social media platform built with React Native for cross-platform compatibility. Features include:
-    • Real-time messaging and notifications
-    • Photo and video sharing
-    • Story features with filters
-    • User profiles and friend system
-    • Content feed with infinite scroll
-    • Location-based features
-    • Privacy settings
-    • Push notifications
-    • Offline mode support`,
-    features: [
-      "Real-time Messaging",
-      "Media Sharing",
-      "Story Features",
-      "User Profiles",
-      "Location Services",
-      "Privacy Controls",
-    ],
-    challenges:
-      "Managing real-time data synchronization, implementing efficient media handling, and ensuring smooth performance across different devices.",
-    solution:
-      "Used Firebase for real-time features, implemented efficient media compression, and created a robust caching system for offline support.",
-  },
-];
-
-const categories = ["All", "Web Development", "Mobile App"];
+import { projects, categories } from "@/data/projects";
 
 function ProjectModal({ project, onClose }) {
   return (
@@ -322,7 +129,7 @@ function ProjectModal({ project, onClose }) {
 function ProjectCard({ project, onClick }) {
   return (
     <motion.div
-      className="bg-white/5 backdrop-blur-sm shadow-sm shadow-emerald-400 overflow-hidden border border-emerald-500/20 hover:border-emerald-500/40 transition-colors cursor-pointer"
+      className="bg-white/5 h-full backdrop-blur-sm shadow-sm shadow-emerald-400 overflow-hidden border border-emerald-500/20 hover:border-emerald-500/40 transition-colors cursor-pointer"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
       onClick={onClick}
@@ -361,7 +168,9 @@ function ProjectCard({ project, onClick }) {
         </div>
 
         <h3 className="text-xl font-bold mb-2">{project.projectName}</h3>
-        <p className="text-gray-400 text-sm mb-6">{project.description}</p>
+        <p className="text-gray-400 text-sm mb-6 line-clamp-2">
+          {project.description}
+        </p>
 
         {/* Action Buttons */}
         <div className="flex gap-3">
