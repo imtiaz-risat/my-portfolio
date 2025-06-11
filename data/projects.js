@@ -3,7 +3,7 @@ export const projects = [
   {
     projectType: "Web",
     projectName: "Ibn Sina Medical Web App",
-    projectImage: "/project/ibnsina.png",
+    projectImage: "/project/ibnsina.webp",
     techStack: ["typescript", "next.js", "node.js", "prisma", "postgresql"],
     techStackDetails: `Frontend:
 • Next.js (App Router) for fast routing and SSR support  
@@ -43,7 +43,7 @@ Dev & Deployment:
   {
     projectType: "Web",
     projectName: "CrackEd – IUT Admission Prep Platform",
-    projectImage: "/project/cracked.png",
+    projectImage: "/project/cracked.webp",
     techStack: ["javascript", "react", "node.js", "express", "mongodb"],
     techStackDetails: `Frontend:
 • React with component‑based UI for Students, Tutors, Admins  
@@ -85,7 +85,7 @@ Dev & Deployment:
   {
     projectType: "Web",
     projectName: "Skeleton‑Dev UI Starter",
-    projectImage: "/project/skeleton-ui.png",
+    projectImage: "/project/skeleton-ui.webp",
     techStack: ["javascript", "tailwindcss", "html", "css"],
     techStackDetails: `Frontend:
 • Utility‑first styling with Tailwind CSS  
@@ -117,7 +117,7 @@ Tooling:
   {
     projectType: "Web",
     projectName: "Inherit - AI-Powered Coding Education",
-    projectImage: "/project/inherit.png",
+    projectImage: "/project/inherit.webp",
     techStack: [
       "next.js",
       "tailwindcss",
@@ -167,7 +167,7 @@ AI & Integrations:
   {
     projectType: "Web",
     projectName: "অক্ষর (Okkhor) - AI-Powered Bengali Learning Platform",
-    projectImage: "/project/okkhor.png",
+    projectImage: "/project/okkhor.webp",
     techStack: [
       "next.js",
       "react",
@@ -205,7 +205,7 @@ AI & Integrations:
   {
     projectType: "Mobile",
     projectName: "Menoo - Digital Menu & Ordering",
-    projectImage: "/project/menoo.png",
+    projectImage: "/project/menoo.webp",
     techStack: ["react-native", "expo", "supabase"],
     techStackDetails:
       "React Native with Expo for cross-platform mobile app development, Supabase as the backend for database, authentication, and realtime functionality",
@@ -232,7 +232,7 @@ AI & Integrations:
   {
     projectType: "Mobile",
     projectName: "Check.td - Smart Task & Productivity Manager",
-    projectImage: "/project/checktd.png",
+    projectImage: "/project/checktd.webp",
     techStack: ["react-native", "expo", "firebase"],
     techStackDetails:
       "React Native with Expo for cross-platform mobile app development, Firebase for backend services including authentication, real-time database, and push notifications",
@@ -259,7 +259,7 @@ AI & Integrations:
   {
     projectType: "Web",
     projectName: "IUTPS - Landing Page",
-    projectImage: "/project/iutps.png",
+    projectImage: "/project/iutps.webp",
     techStack: ["react", "css", "js"],
     techStackDetails:
       "React for building a responsive and interactive landing page, CSS for styling, and vanilla JavaScript for client-side functionality.",
@@ -282,7 +282,7 @@ AI & Integrations:
   {
     projectType: "Web",
     projectName: "IUTCBS - Club Website",
-    projectImage: "/project/iutcbs.png",
+    projectImage: "/project/iutcbs.webp",
     techStack: ["react", "tailwindcss", "js", "mongodb"],
     techStackDetails:
       "React for dynamic content management, CSS for styling, and JavaScript for interactivity and form handling.",
@@ -305,7 +305,7 @@ AI & Integrations:
   {
     projectType: "Desktop",
     projectName: "Skedule - A Schedule Management Application for Students",
-    projectImage: "/project/skedule.png",
+    projectImage: "/project/skedule.webp",
     techStack: ["c#", ".NET"],
     techStackDetails:
       "C# with .NET framework for building a performant Windows desktop application with a user-friendly interface and local data storage.",

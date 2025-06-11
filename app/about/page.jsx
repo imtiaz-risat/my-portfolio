@@ -85,7 +85,7 @@ function AboutPage() {
                 className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden mx-auto"
               >
                 <Image
-                  src="/imtiaz-risat.png"
+                  src="/imtiaz-risat.webp"
                   alt="Profile"
                   fill
                   className="object-cover"
@@ -167,7 +167,7 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
-                    icon: "/fiverr-logo.jpg", // You'll need to add this icon
+                    icon: "/fiverr-logo.webp", // You'll need to add this icon
                     title: "Freelance Developer",
                     company: "Self-employed",
                     date: "Oct 2023 - Present",
