@@ -99,11 +99,18 @@ function AboutPage() {
                   <span className="text-emerald-400">Imtiaz Risat</span>
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  A full-stack developer with a passion for creating beautiful
-                  and functional web applications. I specialize in modern web
-                  technologies and love turning complex problems into simple,
-                  beautiful, and intuitive solutions.
+                  A{" "}
+                  <span className="text-emerald-400">
+                    Full-stack web developer
+                  </span>{" "}
+                  specialized in{" "}
+                  <span className="text-emerald-400">frontend</span> and{" "}
+                  <span className="text-emerald-400">UI/UX design</span>. I am
+                  passionate about building{" "}
+                  <span className="text-emerald-400">product-focused</span> web
+                  apps with clean, functional interfaces.
                 </p>
+
                 <div className="flex flex-wrap gap-4">
                   <motion.a
                     href="/Ahabab-Imtiaz-Risat-CV.pdf"
