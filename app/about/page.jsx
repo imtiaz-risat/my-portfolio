@@ -106,7 +106,8 @@ function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <motion.a
-                    href="#"
+                    href="/Ahabab-Imtiaz-Risat-CV.pdf"
+                    download="Ahabab-Imtiaz-Risat-CV.pdf"
                     className="flex items-center gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -121,7 +122,7 @@ function AboutPage() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Mail size={20} />
-                    <span>Contact Me</span>
+                    <span>Write a mail</span>
                   </motion.a>
                 </div>
               </motion.div>

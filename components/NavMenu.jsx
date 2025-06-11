@@ -164,7 +164,7 @@ export default function CornerNav() {
             >
               <motion.a
                 href="/contact"
-                className="bg-white border border-black text-black flex flex-row items-center gap-2 px-6 py-4 text-xl md:text-4xl font-bold hover:bg-gray-200 transition-colors"
+                className="bg-white border  text-black flex flex-row items-center gap-2 px-6 py-4 text-xl md:text-4xl font-bold hover:bg-gray-200 hover:scale-105 transition-colors"
                 initial="initial"
                 whileHover="hover"
               >

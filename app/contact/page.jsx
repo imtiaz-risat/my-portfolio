@@ -1,7 +1,20 @@
+"use client";
 import React from "react";
 import { RiLinkedinBoxLine, RiMailAiLine, RiPhoneLine } from "react-icons/ri";
 
 function ContactPage() {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:ahababimtiaz@iut-dhaka.edu";
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+8801840141094";
+  };
+
+  const handleLinkedInClick = () => {
+    window.open("https://www.linkedin.com/in/imtiazrisat/", "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-black text-white p-8 flex flex-col items-center justify-between">
       {/* Main Content Area Container with border */}
@@ -24,19 +37,28 @@ function ContactPage() {
           </span> */}
         </h2>
         <div className="flex flex-row gap-4 w-full justify-center relative z-10">
-          <button className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group">
+          <button
+            onClick={handleEmailClick}
+            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+          >
             <span className="group-hover:hidden">WRITE A MESSAGE</span>
             <span className="hidden group-hover:block text-2xl">
               <RiMailAiLine size={40} />
             </span>
           </button>
-          <button className="border border-white flex-grow rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group">
+          <button
+            onClick={handlePhoneClick}
+            className="border border-white flex-grow rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+          >
             <span className="group-hover:hidden">MAKE A CALL</span>
             <span className="hidden group-hover:block text-2xl">
               <RiPhoneLine size={40} />
             </span>
           </button>
-          <button className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group">
+          <button
+            onClick={handleLinkedInClick}
+            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+          >
             <span className="group-hover:hidden">GET IN TOUCH</span>
             <span className="hidden group-hover:block text-2xl">
               <RiLinkedinBoxLine size={40} />
