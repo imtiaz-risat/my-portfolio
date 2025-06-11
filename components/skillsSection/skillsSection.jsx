@@ -9,7 +9,7 @@ import LanguageCard from "./LanguageCard";
 import FrontendCard from "./FrontendCard";
 import BackendCard from "./BackendCard";
 import UIUXCard from "./UIUXCard";
-import ToolsCard from "./ToolsCard";
+// import ToolsCard from "./ToolsCard";
 
 export default function SkillsSection() {
   return (
@@ -27,7 +27,7 @@ export default function SkillsSection() {
         {/* Box 4 */}
         <UIUXCard />
         {/* Box 5 */}
-        <ToolsCard />
+        {/* <ToolsCard /> */}
       </div>
     </div>
   );

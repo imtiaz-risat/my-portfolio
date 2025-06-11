@@ -63,9 +63,16 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0) translateX(0)" },
           "50%": { transform: "translateY(-0.15rem) translateX(-0.15rem)" },
         },
+        ripple: {
+          "0%": { transform: "scale(0.8)", opacity: "0.5" },
+          "100%": { transform: "scale(2)", opacity: "0" },
+        },
       },
       animation: {
         float: "float 5s ease-in-out infinite",
+        ripple: "ripple 4s ease-in-out infinite",
+        "ripple-delayed": "ripple 4s ease-in-out 2s infinite",
+        "ripple-delayed-2": "ripple 4s ease-in-out 4s infinite",
       },
     },
   },

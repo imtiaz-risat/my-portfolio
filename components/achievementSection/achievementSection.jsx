@@ -74,10 +74,12 @@ export default function AchievementSection() {
         Achievements <span className="text-black opacity-75">So Far</span>
       </h1>
       <div className="w-full flex flex-row flex-wrap gap-4 justify-center px-4 sm:px-6 lg:px-20">
-        {displayedAchievements.map((achievement, index) => (
+        {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="bg-black w-80 p-4 shadow-md shadow-emerald-400 flex flex-col justify-between"
+            className={`bg-black w-80 p-4 shadow-md shadow-emerald-400 flex flex-col justify-between ${
+              !showAll && index >= 4 ? "hidden lg:block" : ""
+            }`}
           >
             <div className="flex flex-row justify-between mb-2">
               <div>
@@ -102,21 +104,23 @@ export default function AchievementSection() {
           </div>
         ))}
       </div>
-      {!showAll && achievements.length > 4 ? (
-        <button
-          onClick={() => setShowAll(true)}
-          className="mt-8 px-6 py-2 bg-black text-white hover:bg-gray-900 transition-colors shadow-sm shadow-emerald-400 duration-300"
-        >
-          See More
-        </button>
-      ) : (
-        <button
-          onClick={() => setShowAll(false)}
-          className="mt-8 px-6 py-2 bg-black text-white hover:bg-gray-900 transition-colors shadow-sm shadow-emerald-400 duration-300"
-        >
-          See Less
-        </button>
-      )}
+      <div className="lg:hidden">
+        {!showAll && achievements.length > 4 ? (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-8 px-6 py-2 bg-black text-white hover:bg-gray-900 transition-colors shadow-sm shadow-emerald-400 duration-300"
+          >
+            See More
+          </button>
+        ) : (
+          <button
+            onClick={() => setShowAll(false)}
+            className="mt-8 px-6 py-2 bg-black text-white hover:bg-gray-900 transition-colors shadow-sm shadow-emerald-400 duration-300"
+          >
+            See Less
+          </button>
+        )}
+      </div>
     </div>
   );
 }

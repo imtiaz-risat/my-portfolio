@@ -3,14 +3,26 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiCsswizardry, SiTailwindcss } from "react-icons/si";
+import {
+  SiCsswizardry,
+  SiTailwindcss,
+  SiSocketdotio,
+  SiShadcnui,
+  SiWebrtc,
+} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandReactNative } from "react-icons/tb";
 
 const FrontendCard = () => {
   const frontendTechnologies = [
     {
       icon: <FaReact />,
       name: "React",
+      hoverColor: "hover:text-sky-400",
+    },
+    {
+      icon: <TbBrandReactNative />,
+      name: "React Native",
       hoverColor: "hover:text-sky-400",
     },
     {
@@ -29,15 +41,31 @@ const FrontendCard = () => {
       hoverColor: "hover:text-purple-800",
     },
     {
+      icon: <SiShadcnui />,
+      name: "Shadcn UI",
+      hoverColor: "hover:text-slate-400",
+    },
+    {
+      icon: <SiSocketdotio />,
+      name: "Socket.IO",
+      hoverColor: "hover:text-gray-400",
+    },
+
+    {
+      icon: <SiWebrtc />,
+      name: "WebRTC",
+      hoverColor: "hover:text-yellow-400",
+    },
+    {
       icon: <TbBrandFramerMotion />,
-      name: "Framer Motion",
+      name: "Motion",
       hoverColor: "hover:text-pink-400",
     },
   ];
 
   return (
     <div className="bg-white p-4 shadow-md shadow-emerald-400 flex-1 col-span-1">
-      <h2 className="text-lg font-bold mb-2">Frontend</h2>
+      <h2 className="text-lg font-bold mb-2">Frameworks & Libraries</h2>
       <ul className="flex flex-wrap gap-2">
         {frontendTechnologies.map((language, index) => (
           <li key={index}>
