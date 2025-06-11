@@ -23,7 +23,6 @@ const staggerContainer = {
 function AboutPage() {
   return (
     <div className="min-h-screen bg-black text-white z-0">
-      <NavMenu className="z-50" />
       <div className="absolute inset-0 opacity-25">
         <GridPattern />
       </div>
@@ -131,7 +130,7 @@ function AboutPage() {
         </section>
 
         {/* Combined Journey Section */}
-        <section className="py-20 px-4">
+        <section className="py-32 px-4">
           <motion.div
             className="container mx-auto max-w-6xl"
             variants={staggerContainer}

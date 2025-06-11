@@ -216,7 +216,6 @@ function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-black text-white py-20 px-4">
-      <NavMenu className="z-50" />
       {/* Header Section */}
       <motion.div
         className="max-w-7xl mx-auto mb-6 text-center"

@@ -12,7 +12,6 @@ export default function LandingPage() {
   return (
     <div className="bg-black overflow-x-hidden">
       <WelcomeDiv />
-      <NavMenu className="z-50" />
 
       <HeroSection />
       <ProjectsSection id="projects" />
