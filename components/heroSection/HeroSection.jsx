@@ -67,9 +67,9 @@ const HeroSection = () => {
         <p className="text-sm sm:text-lg text-white mt-4 text-center">
           I'm a{" "}
           <span className="font-semibold text-emerald-400">
-            Frontend Designer
+            Frontend Developer
           </span>{" "}
-          and <span className="font-semibold text-emerald-400">Developer</span>.
+          and <span className="font-semibold text-emerald-400">Designer</span>.
         </p>
         <p className="text-sm sm:text-lg text-white text-center px-8">
           I specialize in frontend development, UI/UX design and visual design.

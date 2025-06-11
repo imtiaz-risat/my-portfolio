@@ -160,20 +160,12 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
-                    icon: "/company-logo-attention.png", // Placeholder, replace with actual path
-                    title: "UI/UX Design Engineer",
-                    company: "The Attention Network",
-                    date: "Jan 2025 - Present",
+                    icon: "/fiverr-logo.jpg", // You'll need to add this icon
+                    title: "Freelance Developer",
+                    company: "Self-employed",
+                    date: "Oct 2023 - Present",
                     description:
-                      "A Community studio to host and promote individuals and businesses.",
-                  },
-                  {
-                    icon: "/company-logo-nasccenia.png", // Placeholder, replace with actual path
-                    title: "UI/UX Designer Intern",
-                    company: "Nascenia",
-                    date: "Jun 2024 - Oct 2024",
-                    description:
-                      "A software development firm with over 50 employees and $14.6M in revenues, serving clients like UNDP, Nokia, A2i, and Robi.",
+                      "Successfully completed 5+ projects as a Level 1 seller on Fiverr, delivering high-quality solutions to diverse clients.",
                   },
                 ].map((exp, index) => (
                   <React.Fragment key={index}>
@@ -186,7 +178,7 @@ function AboutPage() {
                           src={exp.icon}
                           alt={exp.company}
                           fill
-                          className="object-contain rounded-xl"
+                          className="object-contain rounded-3xl"
                         />
                       </div>
                       <div className="flex flex-col">
@@ -200,12 +192,6 @@ function AboutPage() {
                         </p>
                       </div>
                     </motion.div>
-                    {index < 1 && ( // Add separator only after the first item
-                      <motion.div
-                        variants={fadeInUp}
-                        className="border-b border-white/10 my-8"
-                      />
-                    )}
                   </React.Fragment>
                 ))}
               </div>
@@ -224,20 +210,13 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
-                    icon: "/university-logo-placeholder.png", // Placeholder, replace with actual path
-                    title: "Master of Science in Computer Science",
-                    company: "University of Example",
-                    date: "Sept 2022 - May 2024",
+                    icon: "/iut-logo-white.webp", // You'll need to add this icon
+                    title:
+                      "Bachelor of Computer Science in Software Engineering",
+                    company: "Islamic University of Technology",
+                    date: "Aug 2022 - Present",
                     description:
-                      "Specialized in AI and Machine Learning, achieving a GPA of 3.9.",
-                  },
-                  {
-                    icon: "/university-logo-placeholder.png", // Placeholder, replace with actual path
-                    title: "Bachelor of Science in Software Engineering",
-                    company: "Another Tech University",
-                    date: "Sept 2018 - May 2022",
-                    description:
-                      "Graduated with honors, focusing on full-stack web development.",
+                      "Pursuing a comprehensive education in software engineering with a focus on modern development practices, algorithms, and software architecture. Actively participating in various technical projects and competitions.",
                   },
                 ].map((edu, index) => (
                   <React.Fragment key={index}>
@@ -250,7 +229,7 @@ function AboutPage() {
                           src={edu.icon}
                           alt={edu.company}
                           fill
-                          className="object-contain rounded-xl"
+                          className="object-contain rounded-3xl"
                         />
                       </div>
                       <div className="flex flex-col">
@@ -264,12 +243,6 @@ function AboutPage() {
                         </p>
                       </div>
                     </motion.div>
-                    {index < 1 && (
-                      <motion.div
-                        variants={fadeInUp}
-                        className="border-b border-white/10 my-8"
-                      />
-                    )}
                   </React.Fragment>
                 ))}
               </div>
