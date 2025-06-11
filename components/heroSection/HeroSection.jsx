@@ -78,7 +78,7 @@ const HeroSection = () => {
       <div className="flex items-center gap-4">
         <button
           className="mt-8 flex items-center gap-1 border border-white text-white px-4 py-2 hover:bg-emerald-400 hover:border-emerald-400 hover:scale-105 transition-all"
-          onClick={() => (window.location.href = "#contact")}
+          onClick={() => (window.location.href = "/contact")}
         >
           Contact Me
         </button>

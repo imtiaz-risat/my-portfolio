@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import FloppyDiskCard from "./FloppyDiskCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const FloppyDiskCarousel = ({ cardsData }) => {
+const FloppyDiskCarousel = ({ cardsData, onShowToast }) => {
   const [currentIndex, setCurrentIndex] = useState(
     Math.floor(cardsData.length / 2)
   );
@@ -57,17 +57,11 @@ const FloppyDiskCarousel = ({ cardsData }) => {
               key={index}
               className="carousel-card"
               initial={{ x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }}
-              // initial={
-              //   hasAnimated
-              //     ? { x, y, scale, rotate, zIndex }
-              //     : { x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }
-              // }
               animate={
                 isInView
                   ? { x, y, scale, rotate, zIndex }
                   : { x: 0, y: 0, scale: 0.5, rotate: 0, zIndex: 0 }
               }
-              // animate={{ x, y, scale, rotate, zIndex }}
               transition={{ type: "spring", stiffness: 75, damping: 20 }}
               style={{
                 position: "absolute",
@@ -84,6 +78,7 @@ const FloppyDiskCarousel = ({ cardsData }) => {
                 techStack={card.techStack}
                 currentIndex={currentIndex}
                 index={index}
+                onShowToast={onShowToast}
               />
             </motion.div>
           );

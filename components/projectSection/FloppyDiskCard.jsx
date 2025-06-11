@@ -10,6 +10,7 @@ const FloppyDiskCard = ({
   techStack,
   currentIndex,
   index,
+  onShowToast = () => {},
 }) => {
   const techIcons = {
     javascript: "../public/techStacks/javascript.svg",
@@ -32,6 +33,14 @@ const FloppyDiskCard = ({
       },
     },
   };
+
+  const handleButtonClick = (type, e) => {
+    e.stopPropagation();
+    if (currentIndex === index) {
+      onShowToast(`${type} link will be available soon!`);
+    }
+  };
+
   return (
     <>
       <div className={`relative w-80 h-[22rem] md:w-96 md:h-96`}>
@@ -79,7 +88,7 @@ const FloppyDiskCard = ({
             {/* <p className="text-sm opacity-90">{projectDescription}</p> */}
 
             {/* Tech Stack SVGs */}
-            <div className="flex space-x-2 pt-1">
+            {/* <div className="flex space-x-2 pt-1">
               {techStack.map((tech, index) => (
                 <img
                   key={index}
@@ -88,6 +97,17 @@ const FloppyDiskCard = ({
                   className="w-6 h-6"
                 />
               ))}
+            </div> */}
+
+            {/* Tech Stack List */}
+            <div key={index} className="pt-1 line-clamp-1">
+              <p className="text-sm text-emerald-500 opacity-90">
+                {techStack.map((tech, i) => (
+                  <span key={i}>
+                    {i > 0 && " "}• {tech}
+                  </span>
+                ))}
+              </p>
             </div>
 
             {/* Live Demo and Source Code Buttons */}
@@ -98,6 +118,7 @@ const FloppyDiskCard = ({
                 whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
                 disabled={currentIndex === index ? false : true}
+                onClick={(e) => handleButtonClick("Live Demo", e)}
               >
                 <span className="text-xs md:text-sm font-medium">
                   Live Demo
@@ -112,14 +133,12 @@ const FloppyDiskCard = ({
                 whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
                 disabled={currentIndex === index ? false : true}
+                onClick={(e) => handleButtonClick("Source Code", e)}
               >
                 <span className="text-xs md:text-sm font-medium">
                   Source Code
                 </span>
-                <motion.div
-                  variants={svgVariants}
-                  className="transform-gpu" // Optional: helps with animation performance
-                >
+                <motion.div variants={svgVariants} className="transform-gpu">
                   <Code className="w-4 h-4" />
                 </motion.div>
               </motion.button>
