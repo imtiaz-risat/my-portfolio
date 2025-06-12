@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Github, Globe, X } from "lucide-react";
+import { Globe, X, Code } from "lucide-react";
 import Image from "next/image";
 import NavMenu from "@/components/NavMenu";
 import { projects, categories } from "@/data/projects";
@@ -50,7 +50,7 @@ function ProjectModal({ project, onClose, onShowToast }) {
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
             <span className="text-emerald-400">{project.projectType}</span>
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               {project.techStack.map((tech, index) => (
                 <div
                   key={index}
@@ -64,7 +64,7 @@ function ProjectModal({ project, onClose, onShowToast }) {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <h2 className="text-3xl font-bold mb-4">{project.projectName}</h2>
@@ -84,7 +84,7 @@ function ProjectModal({ project, onClose, onShowToast }) {
             <h3 className="text-xl font-semibold mb-3 text-emerald-400">
               Key Features
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {project.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
@@ -108,17 +108,19 @@ function ProjectModal({ project, onClose, onShowToast }) {
           <div className="flex gap-4">
             <button
               onClick={() => handleButtonClick("Live Demo")}
-              className="flex-1 flex items-center justify-center gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
+              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
             >
-              <Globe size={20} />
-              <span>Live Demo</span>
+              <Globe className="w-4 h-4" />
+              <span className="text-xs md:text-sm font-medium">Live Demo</span>
             </button>
             <button
               onClick={() => handleButtonClick("Source Code")}
-              className="flex-1 flex items-center justify-center gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
+              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
             >
-              <Github size={20} />
-              <span>Source Code</span>
+              <Code className="w-4 h-4" />
+              <span className="text-xs md:text-sm font-medium">
+                Source Code
+              </span>
             </button>
           </div>
         </div>
@@ -167,16 +169,16 @@ function ProjectCard({ project, onClick, onShowToast }) {
         <div className="flex gap-3">
           <button
             onClick={(e) => handleButtonClick("Live Demo", e)}
-            className="flex-1 flex items-center justify-center gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
+            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
           >
-            <Globe size={16} />
+            <Globe className="w-4 h-4" />
             <span>Live Demo</span>
           </button>
           <button
             onClick={(e) => handleButtonClick("Source Code", e)}
-            className="flex-1 flex items-center justify-center gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
+            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
           >
-            <Github size={16} />
+            <Code className="w-4 h-4" />
             <span>Source Code</span>
           </button>
         </div>

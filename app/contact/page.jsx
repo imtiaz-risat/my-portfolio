@@ -26,40 +26,36 @@ function ContactPage() {
           <div className="absolute aspect-square inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-300/10 via-transparent to-transparent animate-ripple-delayed-2 border border-emerald-300/20 rounded-full"></div>
         </div>
 
-        <p className="hidden lg:block text-lg uppercase tracking-widest mb-4 relative z-10">
+        <p className="hidden lg:block text-lg uppercase trtext-xs md:acking-widest mb-4 relative z-10">
           GOT A PROJECT IN MIND?
         </p>
-        <h2 className="text-7xl text-emerald-500 font-bold mb-12 relative z-10">
+        <h2 className="text-5xl sm:text-6xl md:text-80 text-emerald-500 font-bold mb-12 relative z-10">
           LET'S CONNECT -
-          {/* Cursor element - assuming a simple text character or small div for now */}
-          {/* <span className="absolute -right-6 top-1/2 -translate-y-1/2 text-4xl">
-            -
-          </span> */}
         </h2>
         <div className="flex flex-row gap-4 w-full justify-center relative z-10">
           <button
             onClick={handleEmailClick}
-            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-xs md:text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[80px] max-w-[300px] group"
           >
-            <span className="group-hover:hidden">WRITE A MESSAGE</span>
+            <span className="group-hover:hidden px-1">WRITE A MESSAGE</span>
             <span className="hidden group-hover:block text-2xl">
               <RiMailAiLine size={40} />
             </span>
           </button>
           <button
             onClick={handlePhoneClick}
-            className="border border-white flex-grow rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+            className="border border-white flex-grow rounded-full flex items-center justify-center text-xs md:text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[80px] max-w-[300px] group"
           >
-            <span className="group-hover:hidden">MAKE A CALL</span>
+            <span className="group-hover:hidden px-1">MAKE A CALL</span>
             <span className="hidden group-hover:block text-2xl">
               <RiPhoneLine size={40} />
             </span>
           </button>
           <button
             onClick={handleLinkedInClick}
-            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[100px] max-w-[300px] group"
+            className="border border-white flex-grow aspect-square rounded-full flex items-center justify-center text-xs md:text-sm sm:text-base lg:text-lg hover:bg-emerald-400 hover:border-emerald-400 hover:text-black transition-colors duration-200 min-w-[80px] max-w-[300px] group"
           >
-            <span className="group-hover:hidden">GET IN TOUCH</span>
+            <span className="group-hover:hidden px-1">GET IN TOUCH</span>
             <span className="hidden group-hover:block text-2xl">
               <RiLinkedinBoxLine size={40} />
             </span>
