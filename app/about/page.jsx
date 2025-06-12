@@ -99,10 +99,7 @@ function AboutPage() {
                   <span className="text-emerald-400">Imtiaz Risat</span>
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  A{" "}
-                  <span className="text-emerald-400">
-                    Full-stack web developer
-                  </span>{" "}
+                  A <span className="text-emerald-400">software developer</span>{" "}
                   specialized in{" "}
                   <span className="text-emerald-400">frontend</span> and{" "}
                   <span className="text-emerald-400">UI/UX design</span>. I am
