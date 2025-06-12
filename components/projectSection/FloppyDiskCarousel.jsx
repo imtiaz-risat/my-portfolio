@@ -4,9 +4,7 @@ import FloppyDiskCard from "./FloppyDiskCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const FloppyDiskCarousel = ({ cardsData, onShowToast }) => {
-  const [currentIndex, setCurrentIndex] = useState(
-    Math.floor(cardsData.length / 2)
-  );
+  const [currentIndex, setCurrentIndex] = useState(Math.floor(0));
 
   const ref = useRef(null);
   const isInView = useInView(ref, {
