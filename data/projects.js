@@ -59,7 +59,7 @@ Dev & Deployment:
 • Concurrent dev setup with client + server via npm scripts  
 • Deployed backend on Vercel  
 • GitHub for version control and CI/CD`,
-    liveDemo: "https://cracked-backend.vercel.app",
+    liveDemo: "",
     sourceCode: "https://github.com/imtiaz-risat/Cracked-SPL-II",
     description:
       "A MERN‑stack educational platform tailored for IUT admission test prep",
@@ -96,7 +96,7 @@ Tooling:
 • npm scripts for builds  
 • PurgeCSS or Tailwind JIT for optimized CSS  
 • Optional PostCSS processing`,
-    liveDemo: null,
+    liveDemo: "",
     sourceCode: "https://github.com/imtiaz-risat/skeleton-dev",
     description:
       "A Tailwind‑based UI starter kit with core components and styles",
@@ -147,8 +147,8 @@ AI & Integrations:
 • YouTube Data API for curated video learning  
 • Plagiarism detection API for quest evaluations  
 • Vercel Analytics and Speed Insights for performance tracking`,
-    liveDemo: null,
-    sourceCode: "https://github.com/takitajwar17/inherit",
+    liveDemo: "https://inherit-xtradrill.vercel.app/",
+    sourceCode: "https://github.com/imtiaz-risat/inherit",
     description:
       "An AI-powered learning platform for aspiring developers with curated videos, quests, and custom roadmaps.",
     fullDescription: `Inherit is a modern educational platform built with Next.js to help developers learn coding through interactive lessons, AI-reviewed code execution, time-based quests, and personalized learning paths. Inspired by Aristotle’s school, it merges traditional educational principles with state-of-the-art web technology. Users can track progress, participate in coding quests, and explore curated content while building practical skills.`,
@@ -182,9 +182,8 @@ AI & Integrations:
     ],
     techStackDetails:
       "Frontend:\n• Built with Next.js 15 and React 18\n• Tailwind CSS with Framer Motion for styling and animation\n• Radix UI components for accessible UI\n• React Context API for state management\n\nBackend:\n• Node.js and Next.js API routes\n• MongoDB with Mongoose ORM\n\nAuthentication:\n• Clerk for authentication and role-based access\n\nReal-time:\n• Pusher for real-time collaboration and updates\n\nAI & Integrations:\n• OpenAI GPT-4 for AI-powered language features\n• Google Cloud Text-to-Speech for voice support\n• GROQ SDK for NLP\n• Web Speech API for voice interaction\n\nDeployment:\n• Docker containerization\n• Vercel for hosting and analytics",
-    liveDemo: "https://okkhor.vercel.app",
-    sourceCode:
-      "https://github.com/takitajwar17/KUET-BitFest2025-Hackathon-XtraDrill",
+    liveDemo: "https://okkhor-xtradrill.vercel.app/",
+    sourceCode: "https://github.com/imtiaz-risat/Okkhor",
     description:
       "A Bengali language learning platform with AI-powered features and real-time collaboration.",
     fullDescription:
@@ -263,7 +262,7 @@ AI & Integrations:
     techStack: ["react", "css", "js"],
     techStackDetails:
       "React for building a responsive and interactive landing page, CSS for styling, and vanilla JavaScript for client-side functionality.",
-    liveDemo: "https://iutps.example.com",
+    liveDemo: "",
     sourceCode: "https://github.com/yourusername/iutps-landing-page",
     description:
       "A clean and modern landing page for the Islamic University of Technology Photographic Society (IUTPS) to showcase events, announcements, and membership benefits.",
@@ -287,7 +286,7 @@ AI & Integrations:
     techStackDetails:
       "React for dynamic content management, CSS for styling, and JavaScript for interactivity and form handling.",
     liveDemo: "https://iut-cbs.vercel.app/",
-    sourceCode: "",
+    sourceCode: "https://github.com/imtiaz-risat/iut-cbs",
     description:
       "Official website for the Islamic University of Technology Career & Business Society (IUTCBS), providing information about club activities, member resources, and event archives.",
     fullDescription:

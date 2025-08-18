@@ -8,6 +8,8 @@ const FloppyDiskCard = ({
   projectName,
   projectImage,
   techStack,
+  sourceCode,
+  liveDemo,
   currentIndex,
   index,
   onShowToast = () => {},
@@ -36,8 +38,9 @@ const FloppyDiskCard = ({
 
   const handleButtonClick = (type, e) => {
     e.stopPropagation();
-    if (currentIndex === index) {
-      onShowToast(`${type} link will be available soon!`);
+    let url = type === "Live Demo" ? liveDemo : sourceCode;
+    if (currentIndex === index && url) {
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -114,10 +117,10 @@ const FloppyDiskCard = ({
             <div className="flex space-x-1.5 pt-1">
               {/* Live Demo Button */}
               <motion.button
-                className="bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
+                className="disabled:opacity-65 bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
                 whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
-                disabled={currentIndex === index ? false : true}
+                disabled={currentIndex !== index || !liveDemo || liveDemo == ""}
                 onClick={(e) => handleButtonClick("Live Demo", e)}
               >
                 <span className="text-xs md:text-sm font-medium">
@@ -129,10 +132,12 @@ const FloppyDiskCard = ({
               </motion.button>
               {/* Source Code Button */}
               <motion.button
-                className="bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
+                className="disabled:opacity-65 bg-white text-black px-4 py-2 border-black border flex items-center justify-between w-full group hover:bg-gray-100 transition-colors"
                 whileHover={currentIndex === index ? "hover" : ""}
                 initial="initial"
-                disabled={currentIndex === index ? false : true}
+                disabled={
+                  currentIndex !== index || !sourceCode || sourceCode == ""
+                }
                 onClick={(e) => handleButtonClick("Source Code", e)}
               >
                 <span className="text-xs md:text-sm font-medium">

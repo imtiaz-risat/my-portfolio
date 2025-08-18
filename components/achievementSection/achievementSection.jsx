@@ -30,7 +30,7 @@ export default function AchievementSection() {
       image: "/trophy.svg",
     },
     {
-      title: "Project Shocase",
+      title: "Project Showcase",
       award: "1st Runner Up",
       event: "KUET CSE BitFest 2025",
       location: "KUET",

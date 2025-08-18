@@ -74,6 +74,8 @@ const FloppyDiskCarousel = ({ cardsData, onShowToast }) => {
                 projectDescription={card.projectDescription}
                 projectImage={card.projectImage}
                 techStack={card.techStack}
+                sourceCode={card.sourceCode}
+                liveDemo={card.liveDemo}
                 currentIndex={currentIndex}
                 index={index}
                 onShowToast={onShowToast}

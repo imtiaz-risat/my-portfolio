@@ -9,8 +9,14 @@ import { projects, categories } from "@/data/projects";
 import Toast from "@/components/Toast";
 
 function ProjectModal({ project, onClose, onShowToast }) {
-  const handleButtonClick = (type) => {
-    onShowToast(`${type} link will be available soon!`);
+  const handleButtonClick = (type, e) => {
+    e.stopPropagation();
+    let url = type === "Live Demo" ? project.liveDemo : project.sourceCode;
+    if (url && url !== "") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      onShowToast(`${type} link will be available soon!`);
+    }
   };
 
   return (
@@ -107,15 +113,17 @@ function ProjectModal({ project, onClose, onShowToast }) {
           {/* Action Buttons */}
           <div className="flex gap-4">
             <button
-              onClick={() => handleButtonClick("Live Demo")}
-              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
+              onClick={(e) => handleButtonClick("Live Demo", e)}
+              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors disabled:opacity-65"
+              disabled={!project.liveDemo || project.liveDemo === ""}
             >
               <Globe className="w-4 h-4" />
               <span className="text-xs md:text-sm font-medium">Live Demo</span>
             </button>
             <button
-              onClick={() => handleButtonClick("Source Code")}
-              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors"
+              onClick={(e) => handleButtonClick("Source Code", e)}
+              className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-6 py-3 hover:bg-emerald-400 transition-colors disabled:opacity-65"
+              disabled={!project.sourceCode || project.sourceCode === ""}
             >
               <Code className="w-4 h-4" />
               <span className="text-xs md:text-sm font-medium">
@@ -132,7 +140,12 @@ function ProjectModal({ project, onClose, onShowToast }) {
 function ProjectCard({ project, onClick, onShowToast }) {
   const handleButtonClick = (type, e) => {
     e.stopPropagation();
-    onShowToast(`${type} link will be available soon!`);
+    let url = type === "Live Demo" ? project.liveDemo : project.sourceCode;
+    if (url && url !== "") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      onShowToast(`${type} link will be available soon!`);
+    }
   };
 
   return (
@@ -169,14 +182,16 @@ function ProjectCard({ project, onClick, onShowToast }) {
         <div className="flex gap-3">
           <button
             onClick={(e) => handleButtonClick("Live Demo", e)}
-            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
+            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors disabled:opacity-65"
+            disabled={!project.liveDemo || project.liveDemo === ""}
           >
             <Globe className="w-4 h-4" />
             <span>Live Demo</span>
           </button>
           <button
             onClick={(e) => handleButtonClick("Source Code", e)}
-            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors"
+            className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-white text-black px-4 py-2 hover:bg-emerald-400 transition-colors disabled:opacity-65"
+            disabled={!project.sourceCode || project.sourceCode === ""}
           >
             <Code className="w-4 h-4" />
             <span>Source Code</span>
