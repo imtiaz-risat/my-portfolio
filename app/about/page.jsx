@@ -164,6 +164,14 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
+                    icon: "/TAN-logo.webp", // You may want to add The Attention Network logo
+                    title: "Jr Full-Stack Developer",
+                    company: "The Attention Network",
+                    date: "June 2025 - present",
+                    description:
+                      "Collaborated in developing the event ticketing platform by building end-to-end features, integrating payment systems (SSLCommerz), managing user registrations and event workflows, and optimizing performance for secure, scalable ticket sales. Currently working on the community platform, enhancing user engagement and interaction features.",
+                  },
+                  {
                     icon: "/fiverr-logo.webp", // You'll need to add this icon
                     title: "Freelance Developer",
                     company: "Self-employed",
