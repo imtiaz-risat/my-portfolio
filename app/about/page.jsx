@@ -101,14 +101,17 @@ function AboutPage() {
                 <p className="text-lg text-gray-300 leading-relaxed">
                   A <span className="text-emerald-400">software developer</span>{" "}
                   specialized in{" "}
-                  <span className="text-emerald-400">frontend</span> and{" "}
-                  <span className="text-emerald-400">UI/UX design</span>. I am
+                  <span className="text-emerald-400">
+                    full-stack development
+                  </span>{" "}
+                  and <span className="text-emerald-400">AI/ML</span>. I am
                   passionate about building{" "}
-                  <span className="text-emerald-400">product-focused</span> web
-                  apps with clean, functional interfaces.
+                  <span className="text-emerald-400">product-focused</span> apps
+                  with clean, functional interfaces.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
+                  {/* TO DO: Need to update the CV file */}
                   <motion.a
                     href="/Ahabab-Imtiaz-Risat-CV.pdf"
                     download="Ahabab-Imtiaz-Risat-CV.pdf"
@@ -164,18 +167,26 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
-                    icon: "/TAN-logo.webp", // You may want to add The Attention Network logo
+                    icon: "/vivasoftltd-logo.jpg",
+                    title: "Associate Software Engineer",
+                    company: "Vivasoft Ltd",
+                    date: "Oct 2025 - Jan 2026",
+                    description:
+                      "Worked on speech and AI systems including ASR, TTS, and real-time voice agents. Built and optimized FastAPI-based services for transcription and speech synthesis, conducted extensive R&D on multilingual TTS and ASR models, and prepared large-scale datasets for model training. Developed evaluation pipelines, automated GPU-based training workflows, and deployed services on cloud infrastructure. Also contributed to AI product development by building a Gemini Live–powered features in the app.",
+                  },
+                  {
+                    icon: "/TAN-logo.webp",
                     title: "Jr Full-Stack Developer",
                     company: "The Attention Network",
-                    date: "June 2025 - present",
+                    date: "June 2025 - Sep 2025",
                     description:
                       "Collaborated in developing the event ticketing platform by building end-to-end features, integrating payment systems (SSLCommerz), managing user registrations and event workflows, and optimizing performance for secure, scalable ticket sales. Currently working on the community platform, enhancing user engagement and interaction features.",
                   },
                   {
-                    icon: "/fiverr-logo.webp", // You'll need to add this icon
+                    icon: "/fiverr-logo.webp",
                     title: "Freelance Developer",
                     company: "Self-employed",
-                    date: "Oct 2023 - Present",
+                    date: "Oct 2024 - Present",
                     description:
                       "Successfully completed 5+ projects as a Level 1 seller on Fiverr, delivering high-quality solutions to diverse clients.",
                   },
