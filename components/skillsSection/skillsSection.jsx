@@ -1,15 +1,10 @@
 import React from "react";
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { SiCplusplus } from "react-icons/si";
-import { FaDartLang } from "react-icons/fa6";
 import LanguageCard from "./LanguageCard";
 import FrontendCard from "./FrontendCard";
-import BackendCard from "./BackendCard";
-import UIUXCard from "./UIUXCard";
-// import ToolsCard from "./ToolsCard";
+import BackendAndAPIsCard from "./Backend&APIsCard";
+import DatabaseAndBaaSCard from "./Database&BaaSCard";
+import AIMLCard from "./AIMLCard";
+import DevToolsCard from "./DevToolsCard";
 
 export default function SkillsSection() {
   return (
@@ -23,11 +18,13 @@ export default function SkillsSection() {
         {/* Box 2 */}
         <FrontendCard />
         {/* Box 3 */}
-        <BackendCard />
+        <BackendAndAPIsCard />
         {/* Box 4 */}
-        <UIUXCard />
+        <DatabaseAndBaaSCard />
         {/* Box 5 */}
-        {/* <ToolsCard /> */}
+        <AIMLCard />
+        {/* Box 6 */}
+        <DevToolsCard />
       </div>
     </div>
   );

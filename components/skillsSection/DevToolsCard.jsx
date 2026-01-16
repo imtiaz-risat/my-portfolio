@@ -8,20 +8,12 @@ import { TbBrandVercel } from "react-icons/tb";
 import { SiPostman } from "react-icons/si";
 import { SiJira } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
-import { SiClerk } from "react-icons/si";
+import { SiGooglecloud } from "react-icons/si";
+import { FiCodesandbox } from "react-icons/fi";
+import { SiDocker } from "react-icons/si";
 
-const UIUXCard = () => {
-  const UIUXTechnologies = [
-    {
-      icon: <FaFigma />,
-      name: "Figma",
-      hoverColor: "hover:text-orange-500", // Lighter orange for Figma
-    },
-    {
-      icon: <FiFramer />,
-      name: "Framer",
-      hoverColor: "hover:text-blue-500", // Bright blue for Framer
-    },
+const DevToolsCard = () => {
+  const devToolsTechnologies = [
     {
       icon: <FaGitAlt />,
       name: "Git",
@@ -30,12 +22,17 @@ const UIUXCard = () => {
     {
       icon: <LuGithub />,
       name: "Github",
-      hoverColor: "hover:text-gray-600", // Medium gray for GitHub
+      hoverColor: "hover:text-gray-400", // Medium gray for GitHub
     },
     {
-      icon: <TbBrandVercel />,
-      name: "Vercel",
-      hoverColor: "hover:text-sky-500", // Sky blue for Vercel
+      icon: <SiDocker />,
+      name: "Docker",
+      hoverColor: "hover:text-blue-600", // Medium gray for GitHub
+    },
+    {
+      icon: <SiGooglecloud />,
+      name: "GCP",
+      hoverColor: "hover:text-blue-400", // Bright blue for GCP
     },
     {
       icon: <SiPostman />,
@@ -43,27 +40,37 @@ const UIUXCard = () => {
       hoverColor: "hover:text-orange-400", // Light orange for Postman
     },
     {
-      icon: <SiClerk />,
-      name: "Clerk",
-      hoverColor: "hover:text-indigo-500", // Bright indigo for Clerk
+      icon: <FaFigma />,
+      name: "Figma",
+      hoverColor: "hover:text-purple-500", // Lighter orange for Figma
+    },
+    {
+      icon: <FiFramer />,
+      name: "Framer",
+      hoverColor: "hover:text-blue-500", // Bright blue for Framer
+    },
+    {
+      icon: <FiCodesandbox />,
+      name: "RunPod",
+      hoverColor: "hover:text-violet-400", // Bright violet for RunPod
+    },
+    {
+      icon: <TbBrandVercel />,
+      name: "Vercel",
+      hoverColor: "hover:text-gray-300", // Sky gray for Vercel
     },
     {
       icon: <SiJira />,
       name: "Jira",
       hoverColor: "hover:text-blue-400", // Light blue for Jira
     },
-    {
-      icon: <FiFramer />,
-      name: "Clerk",
-      hoverColor: "hover:text-indigo-500", // Bright indigo for Clerk
-    },
   ];
 
   return (
     <div className="bg-white p-4 shadow-md shadow-emerald-400 flex-1 col-span-1 ">
-      <h2 className="text-lg font-bold mb-2">UI/UX & Tools</h2>
+      <h2 className="text-lg font-bold mb-2">Cloud & Developer Tools</h2>
       <ul className="flex flex-wrap gap-2">
-        {UIUXTechnologies.map((language, index) => (
+        {devToolsTechnologies.map((language, index) => (
           <li key={index}>
             <motion.div
               className={`flex items-center gap-1 w-fit bg-black p-2 shadow-md text-white transition-all duration-300 ${language.hoverColor}`}
@@ -79,4 +86,4 @@ const UIUXCard = () => {
   );
 };
 
-export default UIUXCard;
+export default DevToolsCard;
