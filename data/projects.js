@@ -81,6 +81,54 @@ Dev & Deployment:
     ],
   },
 
+  // Bangla TTS Studio
+  {
+    projectType: "Web",
+    projectName: "Bangla TTS Studio",
+    projectImage: "/project/bangla-tts-studio.png",
+    techStack: [
+      "python",
+      "fastapi",
+      "react",
+      "vite",
+      "docker",
+      "ffmpeg",
+      "nemo_toolkit",
+      "google-genai",
+    ],
+    techStackDetails: `Frontend:
+• React + Vite with Shadcn UI  
+• Wavesurfer.js for waveform editing  
+
+Backend:
+• FastAPI server with audio processing  
+• Silero VAD via PyTorch for chunking  
+• FFmpeg + librosa + soundfile for conversion  
+
+AI & Transcription:
+• NVIDIA NeMo ASR (Fast Conformer)  
+• Google Gemini 2.5 Flash Lite via google-genai  
+
+Dev & Deployment:
+• Docker Compose: API + Nginx web  
+• .env for secrets; data persisted under /data`,
+    liveDemo: "",
+    sourceCode: "https://github.com/imtiaz-risat/bangla-tts-studio",
+    description:
+      "A full-stack workspace for managing Bangla text-to-speech data with advanced audio chunking and AI-powered transcription workflows",
+    fullDescription: `Bangla TTS Studio enables uploading audio, automatic speech-based chunking, manual segment editing on waveform, and transcription via local ASR (NeMo) or Gemini. Exports transcripts to CSV/JSON/TXT and runs locally or via Docker Compose with persistent session data.`,
+    features: [
+      "Audio upload with FFmpeg conversion to mono WAV",
+      "Silero VAD-based chunking with configurable parameters",
+      "Waveform editor to adjust segments",
+      "Transcription via NeMo ASR",
+      "Gemini transcription (one or many chunks)",
+      "Export transcripts as CSV/JSON/TXT",
+      "Docker Compose setup (API + Web)",
+      "Session persistence in local data directory",
+    ],
+  },
+
   // Skeleton Ui
   {
     projectType: "Web",
