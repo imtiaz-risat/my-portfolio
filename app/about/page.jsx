@@ -180,7 +180,7 @@ function AboutPage() {
                     company: "The Attention Network",
                     date: "June 2025 - Sep 2025",
                     description:
-                      "Collaborated in developing the event ticketing platform by building end-to-end features, integrating payment systems (SSLCommerz), managing user registrations and event workflows, and optimizing performance for secure, scalable ticket sales. Currently working on the community platform, enhancing user engagement and interaction features.",
+                      "Collaborated in developing the event ticketing platform by building end-to-end features, integrating payment systems (SSLCommerz), managing user registrations and event workflows, and optimizing performance for secure, scalable ticket sales. Also contributed to the Attention's Community platform, enhancing user engagement and interaction features.",
                   },
                   {
                     icon: "/fiverr-logo.webp",
