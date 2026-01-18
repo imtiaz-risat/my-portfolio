@@ -29,11 +29,16 @@ export default function ChatBot() {
     scrollToBottom();
   }, [messages, isOpen]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!input.trim() || isLoading) return;
+  const suggestedQuestions = [
+    "What are Risat's top skills?",
+    "Tell me about his projects.",
+    "How can I contact Risat?",
+  ];
 
-    const userMessage = input.trim();
+  const sendMessage = async (text) => {
+    if (!text.trim() || isLoading) return;
+
+    const userMessage = text.trim();
     setInput("");
     setMessages((prev) => [...prev, { role: "user", parts: userMessage }]);
     setIsLoading(true);
@@ -75,6 +80,11 @@ export default function ChatBot() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await sendMessage(input);
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -87,18 +97,15 @@ export default function ChatBot() {
             className="fixed bottom-10 right-4 w-[90vw] md:w-[402px] h-[600px] bg-black border border-emerald-500/30 rounded-2xl shadow-2xl shadow-emerald-500/10 z-50 flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-emerald-900/20 border-b border-emerald-500/20 p-4 flex items-center justify-between backdrop-blur-sm">
+            <div className="bg-emerald-900/20 border-b border-emerald-500/20 px-6 py-4 flex items-center justify-between backdrop-blur-sm">
               <div className="flex items-center gap-2">
-                {/* <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <Sparkles size={16} className="text-emerald-400" />
-                </div> */}
-                <div className="flex items-center justify-center overflow-hidden">
+                {/* <div className="flex items-center justify-center overflow-hidden">
                   <img
                     src="lottie/grumpy-cat.png" // your image in /public
                     alt="Cat Icon"
                     className="w-10 h-10 object-contain"
                   />
-                </div>
+                </div> */}
                 <div>
                   <h3 className="font-bold text-white text-sm">
                     Talk with Grumpy
@@ -171,6 +178,24 @@ export default function ChatBot() {
                 </div>
               )}
               <div ref={messagesEndRef} />
+
+              {/* Suggested Questions */}
+              {messages.length === 1 && (
+                <div className="flex flex-col gap-2 mt-4 px-2">
+                  <div className="flex flex-wrap gap-2">
+                    {suggestedQuestions.map((q, i) => (
+                      <button
+                        key={i}
+                        onClick={() => sendMessage(q)}
+                        disabled={isLoading}
+                        className="text-xs bg-emerald-900/30 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-xl hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-colors text-left"
+                      >
+                        {q}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Cat Avatar in Chat */}
               {/* <div className="sticky bottom-0 right-0 flex justify-end pointer-events-none">

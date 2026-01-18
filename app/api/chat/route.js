@@ -18,7 +18,7 @@ export async function POST(req) {
     // if the specific model is not available or correct.
     // You can change this to 'gemini-2.0-flash-exp' or others as needed.
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.0-flash-lite",
       systemInstruction: PORTFOLIO_CONTEXT,
     });
 
