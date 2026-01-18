@@ -94,7 +94,7 @@ export default function ChatBot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-10 right-4 w-[90vw] md:w-[402px] h-[600px] bg-black border border-emerald-500/30 rounded-2xl shadow-2xl shadow-emerald-500/10 z-50 flex flex-col overflow-hidden"
+            className="fixed bottom-10 right-4 max-w-md w-[90vw] md:w-[402px] h-[80vh] md:h-[600px] bg-black border border-emerald-500/30 rounded-2xl shadow-2xl shadow-emerald-500/10 z-50 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-emerald-900/20 border-b border-emerald-500/20 px-6 py-4 flex items-center justify-between backdrop-blur-sm">
@@ -107,7 +107,7 @@ export default function ChatBot() {
                   />
                 </div> */}
                 <div>
-                  <h3 className="font-bold text-white text-sm">
+                  <h3 className="font-bold text-white text-md md:text-lg">
                     Talk with Grumpy
                   </h3>
                   <p className="text-xs text-emerald-400/80">
