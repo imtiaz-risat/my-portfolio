@@ -209,7 +209,7 @@ export default function ChatBot() {
             {/* Input */}
             <form
               onSubmit={handleSubmit}
-              className="p-4 border-t border-emerald-500/20 bg-black/50 backdrop-blur-sm"
+              className="p-4 border-t border-emerald-500/20 bg-black backdrop-blur-sm"
             >
               <div className="relative">
                 <input
