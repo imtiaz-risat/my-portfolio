@@ -167,6 +167,14 @@ function AboutPage() {
               <div className="space-y-12">
                 {[
                   {
+                    icon: "/version3-logo.webp",
+                    title: "Associate Software Engineer",
+                    company: "Version3",
+                    date: "Feb 2026 - Present",
+                    description:
+                      "Drive design decisions for an omnichannel platform for f-commerce businesses, featuring moderation management, analytics, and AI-powered features. Primarily own front-end design and implementation, while also contributing to back-end and database schema design. Make product feature decisions in close collaboration with the team and stakeholders.",
+                  },
+                  {
                     icon: "/vivasoftltd-logo.jpg",
                     title: "Associate Software Engineer",
                     company: "Vivasoft Ltd",
