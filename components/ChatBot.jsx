@@ -65,6 +65,8 @@ export default function ChatBot() {
         throw new Error(data.error);
       }
 
+      console.log(`Chat response from: ${data.provider?.toUpperCase() ?? "UNKNOWN"}`);
+
       setMessages((prev) => [...prev, { role: "model", parts: data.response }]);
     } catch (error) {
       console.error("Chat Error:", error);
